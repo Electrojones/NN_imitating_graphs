@@ -1,7 +1,7 @@
 import math
 import os
 from keras.utils import to_categorical
-x=-20
+x=-5
 
 #windoof
 '''
@@ -26,9 +26,12 @@ DATA_CSV.write("Input,Output")
 
 
 while(1):
-	y=round(math.sin(x/2), 2)
-	#y = to_categorical(y)
+	print ("\n"+str(x)+":")
+	#y=round(math.sin(x/2), 2)
+	y = round(1 / (1 + math.exp(-x)), 2)
 	DATA_CSV.write("\n"+str(x)+","+str(y))
-	x+=0.5
-	if x==20.5:
+	print("\n"+str(x)+","+str(y))
+	x+=0.05
+	x=round(x, 2)
+	if x>5:
 		break
