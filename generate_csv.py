@@ -28,7 +28,8 @@ DATA_CSV.write("Input,Output")
 while(1):
 	print ("\n"+str(x)+":")
 	#y=round(math.sin(x/2), 2)
-	y = round(1 / (1 + math.exp(-x)), 2)
+	y = round(-(1 / (1 + math.exp(-x))), 2)
+	#y=round(math.sin(x), 2)
 	DATA_CSV.write("\n"+str(x)+","+str(y))
 	print("\n"+str(x)+","+str(y))
 	x+=0.05
