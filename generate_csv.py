@@ -3,7 +3,7 @@ import os
 from keras.utils import to_categorical
 import numpy as np
 
-x=-5
+x=0
 
 #windoof
 '''
@@ -34,9 +34,10 @@ while(1):
 	#y=round(math.sin(x), 2)
 	#y=3*x**5-4*x**3-6*x
 	y=0.2+0.4*x/10**2+0.3*x/10*np.sin(15*x/10)+0.05*np.cos(50*x/10)
+	#y=x**2/10
 	DATA_CSV.write("\n"+str(x)+","+str(y))
 	print("\n"+str(x)+","+str(y))
 	x+=0.05
 	x=round(x, 2)
-	if x>5:
+	if x>10:
 		break
