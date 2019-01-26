@@ -1,6 +1,8 @@
 import math
 import os
 from keras.utils import to_categorical
+import numpy as np
+
 x=-5
 
 #windoof
@@ -28,8 +30,10 @@ DATA_CSV.write("Input,Output")
 while(1):
 	print ("\n"+str(x)+":")
 	#y=round(math.sin(x/2), 2)
-	y = round(-(1 / (1 + math.exp(-x))), 2)
+	#y = round(-(1 / (1 + math.exp(-x))), 2)
 	#y=round(math.sin(x), 2)
+	#y=3*x**5-4*x**3-6*x
+	y=0.2+0.4*x/10**2+0.3*x/10*np.sin(15*x/10)+0.05*np.cos(50*x/10)
 	DATA_CSV.write("\n"+str(x)+","+str(y))
 	print("\n"+str(x)+","+str(y))
 	x+=0.05
