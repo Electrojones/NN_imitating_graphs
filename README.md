@@ -1,1 +1,1 @@
-testing tensorflow function simulating git
+This is as neural network immitating graphs. Its based on Keras/Tensorflow.
